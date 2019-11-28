@@ -1,0 +1,91 @@
+.header {
+  width: 100vw;
+  background-color: $first-color;
+  background-color: #79BAFE;   //potencjalne kolory navbara
+  background-color: #67A8FF;   //potencjalne kolory navbara
+  background-color: #4F94FE;   //potencjalne kolory navbara
+  // background-color: #3A7FFE;   //potencjalne kolory navbara
+  background-color: rgb(39, 90, 184);
+  background-color: rgb(10, 101, 161);
+  // background-color: rgb(5, 70, 107);
+  // background-image: linear-gradient(to right, rgb(138, 187, 240) , rgb(68, 134, 233));
+  // background-image: linear-gradient( rgb(137, 192, 250) , #3281F6);
+  height: 60px;
+  position: fixed;
+  top: 0px; 
+
+  &__logo {
+    width: 80px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    filter: grayscale(50%);
+  }
+  // &__logo {
+  //   // width: 170px;
+  //   // width: 200px;
+  //   width: 110px;
+  //   position: relative;      //alternatywne polozenie logo
+  //   top: 10px;
+  //   left: 10px;
+  //   filter: grayscale(50%);
+    
+  // }
+
+  &__hamburger {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    z-index: 2;
+  }
+
+  &__hamburger-bar {
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    border-radius: 20px;
+  }
+
+  &__nav-list {
+    background-color: #ededed;
+    position: fixed;
+    top: 0px;
+    // right: 100vw;
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.95;
+    padding-top: 65px;
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    &--active {
+      // right: 0;
+      left: 0;
+    }
+  }
+
+  &__nav-item {
+    color: $first-color;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 15px;
+  }
+}
+
+// hamburger animate class
+.change .bar-1 {
+  background-color: $first-color;
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar-2 {
+  background-color: $first-color;
+  opacity: 0;
+}
+
+.change .bar-3 {
+  background-color: $first-color;
+  transform: rotate(45deg) translate(-8px, -8px);
+}

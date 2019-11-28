@@ -1,0 +1,23 @@
+//colors:
+$first-color: #31708e;
+$second-color: #5085a5;
+$third-color: #8fc1e3;
+$heading-color: #687864;
+
+//text settings:
+@mixin section-heading {
+  
+}
+
+//break points:
+@mixin mobile {
+  @media (max-width: 768px) { @content; };
+};
+
+@mixin tablet {
+  @media (max-width: 1024px) { @content; }
+};
+
+@mixin desktop {
+  @media (min-width: 1025px) { @content; }
+};
