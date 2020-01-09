@@ -5,8 +5,30 @@ $third-color: #8fc1e3;
 $heading-color: #687864;
 
 //text settings:
-@mixin section-heading {
-  
+@mixin section-header {
+  position: relative;
+  color: $heading-color;
+  font-size: 30px;
+  // padding-top: 20px;
+  // margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 74vw;
+    max-width: 350px;
+    height: 2px;
+    background-color: $second-color;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include desktop {
+    font-size: 40px;
+    margin-bottom: 100px;
+  }
 }
 
 //break points:

@@ -1,0 +1,70 @@
+.about-us {
+  position: relative;
+  padding-top: 40px;
+
+  &__header {
+    @include section-header;
+  }
+
+  &__card {
+    background-color: ghostwhite;
+    position: relative;
+    width: 84vw;
+    margin: 0 auto 50px;
+    box-shadow: 7px 7px 15px -4px;
+    border-radius: 5px;
+    opacity: 0.9;
+    padding: 17px;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 60vw;
+      max-width: 270px;
+      height: 1px;
+      background-color: $first-color;
+      top: 47px;
+      left: -8vw;
+    }
+    @include desktop {
+      opacity: 0.8;
+      width: 30vw;
+      margin: 0 10vw 50px auto;
+    }
+  }
+
+  &__card-title {
+    margin-bottom: 15px;
+    color: $second-color;
+    font-size: 27px;
+  }
+
+  &__card-content {
+    font-size: 18px;
+  }
+
+  &__background-mobile {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $second-color;
+      clip-path: polygon(0 15%, 100% 25%, 100% 95%, 0% 100%);
+      @include desktop {
+        display: none;
+      }
+    }
+    
+    &__background-desktop {
+      @include tablet {
+        display: none;
+      }
+      @include desktop {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $second-color;
+        clip-path: polygon(0 15%, 100% 25%, 100% 95%, 0% 100%);
+        filter: grayscale(30%);
+      }
+
+  }
+}

@@ -1,6 +1,7 @@
 @import "mixins-and-variablles.scss";
 @import "header.scss";
 @import "slider.scss";
+@import "about-us.scss";
 
 * {
   padding: 0;
@@ -8,9 +9,11 @@
   list-style: none;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body {
   width: 100vw;
   overflow-x: hidden;
+  background-color: rgb(245, 245, 245);
 }
