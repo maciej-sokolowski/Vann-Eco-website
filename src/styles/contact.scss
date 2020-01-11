@@ -1,0 +1,38 @@
+.contact {
+  margin-top: 70px;
+
+  &__header {
+    @include section-header;
+  }
+
+  &__cards-container {
+    @include desktop {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    margin: 0 auto 45px;
+    text-align: center;
+    @include desktop {
+      margin: 0 60px 50px;
+    }
+  }
+
+  &__card-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__card-details {
+    font-size: 22px;
+    margin-top: 10px;
+    color: $second-color;
+    @include desktop {
+      margin-top: 20px;
+    }
+  }
+}

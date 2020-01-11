@@ -10,6 +10,7 @@
     background-color: ghostwhite;
     position: relative;
     width: 82vw;
+    // width: 100%;
     margin: 0 auto 50px;
     box-shadow: 7px 7px 15px -4px;
     border-radius: 5px;
@@ -46,30 +47,31 @@
   }
 
   &__background-mobile {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: $second-color;
-      clip-path: polygon(0 15%, 100% 25%, 100% 95%, 0% 100%);
-      @include desktop {
-        display: none;
-      }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $second-color;
+    clip-path: polygon(0 15%, 100% 25%, 100% 95%, 0% 100%);
+    @include desktop {
+      display: none;
     }
-    
-    &__background-desktop {
-      @include tablet {
-        display: none;
-      }
-      @include desktop {
-        position: absolute;
-        background-image: url(../assets/photo/field.jpg);
-        background-attachment: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: $second-color;
-        clip-path: polygon(0 15%, 100% 25%, 100% 95%, 0% 100%);
-        filter: grayscale(30%);
-      }
+  }
 
+  &__background-desktop {
+    position: absolute;
+    background-image: url(../assets/photo/faucet.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: $second-color;
+    clip-path: polygon(0 15%, 100% 25%, 100% 95%, 0% 100%);
+    filter: grayscale(30%);
+    
+    @include desktop {
+      background-image: url(../assets/photo/field.jpg);
+      background-position: top;
+    }
   }
 }
