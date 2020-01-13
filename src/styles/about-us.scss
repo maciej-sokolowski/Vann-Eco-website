@@ -58,8 +58,9 @@
   }
 
   &__background-desktop {
+    @include desktop {
     position: absolute;
-    background-image: url(../assets/photo/faucet.jpg);
+    // background-image: url(../assets/photo/faucet.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -69,7 +70,6 @@
     clip-path: polygon(0 15%, 100% 25%, 100% 95%, 0% 100%);
     filter: grayscale(30%);
     
-    @include desktop {
       background-image: url(../assets/photo/field.jpg);
       background-position: top;
     }

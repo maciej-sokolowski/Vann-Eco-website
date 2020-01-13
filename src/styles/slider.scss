@@ -4,10 +4,12 @@
   background-image: url(../assets/photo/horizon-water.jpg);
   // background-image: url(../assets/photo/underwater.jpg);
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
   clip-path: polygon(100% 93%, 30% 100%, 0 97%, 0 0, 100% 0);
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+  @include desktop {
+    background-attachment: fixed;
+  }
 
   &__slogan-background {
     width: 100%;
